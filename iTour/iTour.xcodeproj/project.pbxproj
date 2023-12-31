@@ -16,6 +16,7 @@
 		9EBFA5B92B3FC8E2008D46B7 /* iTourUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBFA5B82B3FC8E2008D46B7 /* iTourUITestsLaunchTests.swift */; };
 		9EBFA5C62B3FC995008D46B7 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBFA5C52B3FC995008D46B7 /* Destination.swift */; };
 		9EBFA5CA2B3FD577008D46B7 /* EditDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBFA5C92B3FD577008D46B7 /* EditDestinationView.swift */; };
+		9EBFA5CC2B41212B008D46B7 /* DestinationListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBFA5CB2B41212B008D46B7 /* DestinationListingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9EBFA5B82B3FC8E2008D46B7 /* iTourUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTourUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9EBFA5C52B3FC995008D46B7 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		9EBFA5C92B3FD577008D46B7 /* EditDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDestinationView.swift; sourceTree = "<group>"; };
+		9EBFA5CB2B41212B008D46B7 /* DestinationListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationListingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				9EBFA59A2B3FC8E1008D46B7 /* iTourApp.swift */,
 				9EBFA59C2B3FC8E1008D46B7 /* ContentView.swift */,
+				9EBFA5CB2B41212B008D46B7 /* DestinationListingView.swift */,
 				9EBFA5C92B3FD577008D46B7 /* EditDestinationView.swift */,
 				9EBFA5C52B3FC995008D46B7 /* Destination.swift */,
 				9EBFA59E2B3FC8E2008D46B7 /* Assets.xcassets */,
@@ -269,6 +272,7 @@
 				9EBFA59B2B3FC8E1008D46B7 /* iTourApp.swift in Sources */,
 				9EBFA5C62B3FC995008D46B7 /* Destination.swift in Sources */,
 				9EBFA5CA2B3FD577008D46B7 /* EditDestinationView.swift in Sources */,
+				9EBFA5CC2B41212B008D46B7 /* DestinationListingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
