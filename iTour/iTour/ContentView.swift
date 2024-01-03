@@ -10,24 +10,33 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.modelContext) var modelContext
-    @Query var destinations: [Destination]
+    @State private var path = [Destination]()
+    @State private var sortOrder = SortDescriptor(\Destination.name)
+    @State private var searchText = ""
     
     var body: some View {
-        NavigationStack {
-            List {
-                ForEach(destinations) { destination in
-                    VStack(alignment: .leading) {
-                        Text(destination.name)
-                            .font(.headline)
-                        
-                        Text(destination.date.formatted(date: .long, time: .shortened))
+        NavigationStack(path: $path) {
+            DestinationListingView(sort: sortOrder, searchString: searchText)
+                .navigationTitle("iTour")
+                .navigationDestination(for: Destination.self, destination: EditDestinationView.init)
+                .searchable(text: $searchText)
+                .toolbar {
+                    Button("Add Samples", action: addSamples)
+                    Button("Add Destination", systemImage: "plus", action: addDestination)
+                    Menu("Sort", systemImage: "arrow.up.arrow.down") {
+                        Picker("Sort", selection: $sortOrder) {
+                            Text("Name")
+                                .tag(SortDescriptor(\Destination.name))
+                            
+                            Text("Destination")
+                                .tag(SortDescriptor(\Destination.priority))
+                            
+                            Text("Date")
+                                .tag(SortDescriptor(\Destination.date))
+                        }
+                        .pickerStyle(.inline)
                     }
                 }
-            }
-            .navigationTitle("iTour")
-            .toolbar {
-                Button("Add Samples", action: addSamples)
-            }
         }
     }
     
@@ -39,6 +48,12 @@ struct ContentView: View {
         modelContext.insert(rome)
         modelContext.insert(florence)
         modelContext.insert(naples)
+    }
+    
+    func addDestination() {
+        let destination = Destination()
+        modelContext.insert(destination)
+        path = [destination]
     }
 }
 
